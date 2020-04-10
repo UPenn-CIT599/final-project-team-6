@@ -96,17 +96,24 @@ public class RateCalculator {
 	 * @param year
 	 * @param hwyPercentage
 	 */
+	double CharlotteOneYearEV;
+	double CharlotteUserYearEV;
+	double NewYorkOneYearEV;
+	double NewYorkUserYearEV;
+	double MiamiOneYearEV;
+	double MiamiUserYearEV;
+	
 	public void CostComparsion(double miles, double year, double hwyPercentage) {
 		this.miles = miles;
 		this.year = year;
 		this.hwyPercentage = hwyPercentage;
 
-		double CharlotteOneYearEV = miles / EVMPkwh * CharlotteERate;
-		double CharlotteUserYearEV = CharlotteOneYearEV * year;
-		double NewYorkOneYearEV = miles / EVMPkwh * NewYorkERate;
-		double NewYorkUserYearEV = NewYorkOneYearEV * year;
-		double MiamiOneYearEV = miles / EVMPkwh * MiamiERate;
-		double MiamiUserYearEV = MiamiOneYearEV * year;
+		CharlotteOneYearEV = miles / EVMPkwh * CharlotteERate;
+		CharlotteUserYearEV = CharlotteOneYearEV * year;
+		NewYorkOneYearEV = miles / EVMPkwh * NewYorkERate;
+		NewYorkUserYearEV = NewYorkOneYearEV * year;
+		MiamiOneYearEV = miles / EVMPkwh * MiamiERate;
+		MiamiUserYearEV = MiamiOneYearEV * year;
 
 		ICEUsageReader icedata = new ICEUsageReader("Gas_Data_EastCoastOnly.csv");
 		icedata.ICEMPG();
@@ -164,8 +171,7 @@ public class RateCalculator {
 
 		ArrayList<String> answers = new ArrayList<>();
 
-		answers.add("If you live in Charlotte, Tesla Model 3 will cost you $" + df2.format(CharlotteOneYearEV)
-				+ " in 1 year; $" + df2.format(CharlotteUserYearEV) + " for " + year + " years.");
+
 		answers.add("If you live in Charlotte, Tesla Model 3 will cost you $" + df2.format(CharlotteOneYearEV)
 				+ " in 1 year; $" + df2.format(CharlotteUserYearEV) + " for " + year + " years.");
 		answers.add("If you live in Charlotte, Lexus will cost you $" + df2.format(CharlotteOneYearLexus)
@@ -198,5 +204,23 @@ public class RateCalculator {
 		
 		FormattedOutput outputFile = new FormattedOutput(answers);
 		outputFile.writeAnswers();
+	}
+	public double getCharlotteOneYearEV() {
+		return CharlotteOneYearEV;
+	}
+	public double getCharlotteUserYearEV() {
+		return CharlotteUserYearEV;
+	}
+	public double getNewYorkOneYearEV() {
+		return NewYorkOneYearEV;
+	}
+	public double getNewYorkUserYearEV() {
+		return NewYorkUserYearEV;
+	}
+	public double getMiamiOneYearEV() {
+		return MiamiOneYearEV;
+	}
+	public double getMiamiUserYearEV() {
+		return MiamiUserYearEV;
 	}
 }

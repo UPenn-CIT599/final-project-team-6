@@ -64,7 +64,6 @@ public class Runner {
 		factor.CharlotteElectrcityRate(usageWithEV.costofdata, usageWithEV.usageofdata);
 		factor.NewYorkElectrcityRate();
 		factor.MiamiElectrcityRate();
-		factor.CostComparsion(mileage, totalYear, percentage);
-		
+		factor.CostComparsion(mileage, totalYear, percentage);	
 	}
 }

@@ -49,9 +49,7 @@ public class ICEUsageReader {
 				gasMap.put(Integer.parseInt(columnData[0]), ice); //populate the gasMap hasmap
 			}
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-            e.printStackTrace();
+
 		}
 	}
 	
