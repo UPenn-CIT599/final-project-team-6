@@ -1,5 +1,5 @@
 /**
- * Internal Combustion Engine Usage class
+ * Internal Combustion Engine (ICE) Usage class
  */
 public class ICEUsage { 
 	
@@ -14,14 +14,14 @@ public class ICEUsage {
 	 * hwyMPG = Mile / Gallons in HighWay (i.e.,Mercedes GLC
 	 * and Lexus LX drivers in New York, NY, Charlotte, NC, and Miami, FL)
 	 */
-	private String model; 
+	private static String model; 
 	private String city;
 	private double regularGas;
 	private double premiumGas;
 	private double cityMPG;
 	private double hwyMPG;
 	
-	/**
+		/**
 	 * Constructor for this class
 	 * @param model
 	 * @param city
@@ -40,37 +40,37 @@ public class ICEUsage {
 		this.hwyMPG = hwyMPG;
 	}
 	/**
-	 * retrieves car model
+	 * Retrieves car model.
 	 */
-	public String getModel() {
+	public static String getModel() {
 		return model;
 	}
 	/**
-	 * retrieves city name
+	 * Retrieves city name.
 	 */
 	public String getCity() {
 		return city;
 	}
 	/**
-	 * retrieves regular gas price
+	 * Retrieves regular gas price.
 	 */
 	public double getRegularGas() {
 		return regularGas;
 	}
 	/**
-	 * retrieves premium gas price
+	 * Retrieves premium gas price.
 	 */
 	public double getPremiumGas() {
 		return premiumGas;
 	}
 	/**
-	 * retrieves city miles per gallon
+	 * Retrieves city miles per gallon.
 	 */
 	public double getcityMPG() {
 		return cityMPG;
 	}
 	/**
-	 * retrieves highway miles per gallon
+	 * Retrieves highway miles per gallon.
 	 */
 	public double gethwyMPG() {
 		return hwyMPG;
