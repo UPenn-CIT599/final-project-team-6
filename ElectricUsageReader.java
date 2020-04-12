@@ -46,17 +46,17 @@ public class ElectricUsageReader {
 		try {
 			Scanner scanner = new Scanner(file);
 			/*
-			 * Read and discard the first line (header of the file).
+			 * Reads and discards the first line (header of the file).
 			 */
 			scanner.nextLine(); 
 			/*
-			 * Read while there is a next line.
+			 * Reads while there is a next line.
 			 */
 			while (scanner.hasNextLine()) { 
 				
 				String electrityRow = scanner.nextLine();
 				/*
-				 * Parse column data by comma.
+				 * Parses column data by comma.
 				 */
 				String[] columnData = electrityRow.split(","); 
 
@@ -82,22 +82,22 @@ public class ElectricUsageReader {
 			ElectricUsage thatDaysUseage = Usage.get(nday);
 			int currentmonth = thatDaysUseage.getMonth();
 			/*
-			 * Populate listmonth arraylist.
+			 * Populates listmonth arraylist.
 			 */
 			listmonth.add(currentmonth); 
 			int currentday = thatDaysUseage.getDay();
 			/*
-			 * Populate currentday arraylist.
+			 * Populates currentday arraylist.
 			 */
 			dayofdata.add(currentday);
 			int currentUseage = thatDaysUseage.getUsage();
 			/*
-			 * Populate usageofdata arraylist.
+			 * Populates usageofdata arraylist.
 			 */
 			usageofdata.add(currentUseage);
 			double currentCost = thatDaysUseage.getCost();
 			/*
-			 * Populate costofdata arraylist.
+			 * Populates costofdata arraylist.
 			 */
 			costofdata.add(currentCost);
 		}
@@ -116,13 +116,13 @@ public class ElectricUsageReader {
 	 */
 	public void MonthlyUsage() {
 		/*
-		 * Initiate to 0.
+		 * Initiates to 0.
 		 */
 		int sumofmonthusage = 0; 
 		for (int i = 0; i < monthofdata.size(); i++) {
 			for (int j = 0; j < usageofdata.size(); j++) {
 				/*
-				 * Count only when months are the same.
+				 * Counts only when months are the same.
 				 */
 				if (monthofdata.get(i) == listmonth.get(j)) { 
 					sumofmonthusage = sumofmonthusage + usageofdata.get(j);
@@ -157,14 +157,14 @@ public class ElectricUsageReader {
 			for (int j = 0; j < costofdata.size(); j++) {
 				if (monthofdata.get(i) == listmonth.get(j)) {
 					/*
-					 * Add only when the month is accurate.
+					 * Adds only when the month is accurate.
 					 */
 					sumofmonthcost = sumofmonthcost + costofdata.get(j); 
 					sumofmonthcost = Math.round(sumofmonthcost * 100.0) / 100.0;
 				}
 			}
 			/*
-			 * Populate the arraylist.
+			 * Populates the arraylist.
 			 */
 			monthlycost.add(sumofmonthcost); 
 			/*
