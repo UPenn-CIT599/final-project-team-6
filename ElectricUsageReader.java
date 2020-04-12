@@ -45,11 +45,20 @@ public class ElectricUsageReader {
 		Usage = new HashMap<Integer, ElectricUsage>();
 		try {
 			Scanner scanner = new Scanner(file);
-			scanner.nextLine(); //read and discard the first line (header of the file)
-			while (scanner.hasNextLine()) { //read while there is a next line
+			/*
+			 * Read and discard the first line (header of the file).
+			 */
+			scanner.nextLine(); 
+			/*
+			 * Read while there is a next line.
+			 */
+			while (scanner.hasNextLine()) { 
 				
 				String electrityRow = scanner.nextLine();
-				String[] columnData = electrityRow.split(","); //parse by comma
+				/*
+				 * Parse column data by comma.
+				 */
+				String[] columnData = electrityRow.split(","); 
 
 				int month = Integer.parseInt(columnData[4]);
 				int day = Integer.parseInt(columnData[5]);
@@ -73,22 +82,22 @@ public class ElectricUsageReader {
 			ElectricUsage thatDaysUseage = Usage.get(nday);
 			int currentmonth = thatDaysUseage.getMonth();
 			/*
-			 * populate listmonth arraylist
+			 * Populate listmonth arraylist.
 			 */
 			listmonth.add(currentmonth); 
 			int currentday = thatDaysUseage.getDay();
 			/*
-			 * populate currentday arraylist
+			 * Populate currentday arraylist.
 			 */
 			dayofdata.add(currentday);
 			int currentUseage = thatDaysUseage.getUsage();
 			/*
-			 * populate usageofdata arraylist
+			 * Populate usageofdata arraylist.
 			 */
 			usageofdata.add(currentUseage);
 			double currentCost = thatDaysUseage.getCost();
 			/*
-			 * populate costofdata arraylist
+			 * Populate costofdata arraylist.
 			 */
 			costofdata.add(currentCost);
 		}
