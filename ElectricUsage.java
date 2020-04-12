@@ -1,6 +1,6 @@
 public class ElectricUsage {
-/*
- * This class sets all getter methods for electricity usage information
+/**
+ * This class sets all getter methods for electricity usage information.
  * month = month of the year which usage occurs
  * day = day of the month which usage occurs
  * usage = total usage in one day, unit is kilowatt-hour unit of energy (kwh)
@@ -11,7 +11,7 @@ public class ElectricUsage {
 	private int day;
 	private int usage;
 	private double cost;
-	/*
+	/**
 	 * Constructor for the class
 	 * @param month 
 	 * @param day
@@ -24,25 +24,25 @@ public class ElectricUsage {
 		this.usage = usage;
 		this.cost = cost;
 	}
-	/*
+	/**
 	 * This method retrieves the month that the electric usage occurred.
 	*/
 	public int getMonth() {
 		return month;
 	}
-	/*
+	/**
 	 * This method retrieves the day in the month that electric usage occurred.
 	*/
 	public int getDay() {
 		return day;
 	}
-	/*
+	/**
 	 * This method retrieves the electric usage in kwh units of energy.
 	*/
 	public int getUsage() {
 		return usage;
 	}
-	/*
+	/**
 	 * This method retrieves the cost of electricity utilized.
 	*/
 	public double getCost() {
