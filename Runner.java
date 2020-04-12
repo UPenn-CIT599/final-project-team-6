@@ -10,9 +10,7 @@ import java.util.*;
 * to the cost of gasoline while driving a Lexus LX or Mercedes GLC on the east coast. Output to
 * select prompts is displayed in a text file as well as a chart.
 *
-* @authors  Dewei Zhou <zdw466@seas.upenn.edu>
-* 			Kelly Jackson Charles <kcharl@useas.upenn.edu>
-* 			Bingqian Lu <bingqian@seas.upenn.edu>
+* @authors  Dewei Zhou <zdw466@seas.upenn.edu>, Kelly Jackson Charles <kcharl@useas.upenn.edu>, Bingqian Lu <bingqian@seas.upenn.edu>
 
  */
 
