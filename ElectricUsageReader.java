@@ -1,14 +1,14 @@
 import java.util.*;
 import java.io.*;
 
-/*
+/**
  * This class will read electricity usage data from csv file and store each column in an
  * arraylist.
  */
 
 public class ElectricUsageReader {
 
-	/*
+	/**
 	 * Initializes arraylists as instance variables, which can be used in other classes. 
 	 * listmonth = arraylist contains the months for each day
 	 * monthofdata = arraylist contains only the unique months, in our project will be
@@ -28,13 +28,13 @@ public class ElectricUsageReader {
 	ArrayList<Integer> monthlyusage = new ArrayList<Integer>();
 	ArrayList<Double> monthlycost = new ArrayList<Double>();
 
-	/*
+	/**
 	 * This method creates one HashMap to store data from the csv files, and converts data to int
 	 * or double.
 	 */
 	private HashMap<Integer, ElectricUsage> Usage;
 
-	/*
+	/**
 	 * Constructor for this class.
 	 * It passes in the filename and distributes all data
 	 * into corresponding fields for the ElectricUsage class
@@ -64,24 +64,36 @@ public class ElectricUsageReader {
 		}
 	}
 
-	/*
-	 * This method reads through the HashMap, and stores each row of data into four
+	/**
+	 * This method reads through the hashMap, and stores each row of data into
 	 * arraylists of this class.
 	 */
 	public void list() {
 		for (int nday : Usage.keySet()) {
 			ElectricUsage thatDaysUseage = Usage.get(nday);
 			int currentmonth = thatDaysUseage.getMonth();
-			listmonth.add(currentmonth); //populate listmonth arraylist
+			/*
+			 * populate listmonth arraylist
+			 */
+			listmonth.add(currentmonth); 
 			int currentday = thatDaysUseage.getDay();
-			dayofdata.add(currentday);//populate currentday arraylist
+			/*
+			 * populate currentday arraylist
+			 */
+			dayofdata.add(currentday);
 			int currentUseage = thatDaysUseage.getUsage();
-			usageofdata.add(currentUseage);//populate usageofdata arraylist
+			/*
+			 * populate usageofdata arraylist
+			 */
+			usageofdata.add(currentUseage);
 			double currentCost = thatDaysUseage.getCost();
-			costofdata.add(currentCost);//populate costofdata arraylist
+			/*
+			 * populate costofdata arraylist
+			 */
+			costofdata.add(currentCost);
 		}
 		
-		/*
+		/**
 		 * Uses LinkedHashSet to remove the duplicate month and maintain the unique
 		 * month.
 		 */
@@ -89,34 +101,45 @@ public class ElectricUsageReader {
 		monthofdata = new ArrayList<>(hashSet1);
 	}
 
-	/*
+	/**
 	 * This method calculates the monthly usage by adding up all daily usage and saves
 	 * into an arraylist resulting in monthly usage.
 	 */
 	public void MonthlyUsage() {
-		int sumofmonthusage = 0; //initiate to 0
+		/*
+		 * Initiate to 0.
+		 */
+		int sumofmonthusage = 0; 
 		for (int i = 0; i < monthofdata.size(); i++) {
 			for (int j = 0; j < usageofdata.size(); j++) {
-				if (monthofdata.get(i) == listmonth.get(j)) { //count only when month are the same
+				/*
+				 * Count only when months are the same.
+				 */
+				if (monthofdata.get(i) == listmonth.get(j)) { 
 					sumofmonthusage = sumofmonthusage + usageofdata.get(j);
 				}
 			}
-			monthlyusage.add(sumofmonthusage); //populate arraylist with month useage data
-			sumofmonthusage = 0; //reset the sumofmonthusage to 0 and start again for next month
+			/**
+			 * Populate arraylist with month usage data.
+			 */
+			monthlyusage.add(sumofmonthusage); 
+			/**
+			 * reset the sumofmonthusage to 0 and start again for next month.
+			 */
+			sumofmonthusage = 0; 
 		}
 	}
 
-	/*
-	 * This getter method retrieves the MonthlyUsage.
-	 * 
+	/**
+	 * This getter method retrieves the MonthlyUsage of electricity.
 	 * @return
 	 */
 	public ArrayList<Integer> getMonthlyusage() {
 		return monthlyusage;
 	}
 
-	/*
-	 * This method calculates the monthly cost by adding up all daily cost and saves
+	/**
+	 * This method calculates the monthly cost of electricity by adding up all daily cost and saves
 	 * into arraylist resulting in monthly cost.
 	 */
 	public void MonthlyCost() {
@@ -124,19 +147,26 @@ public class ElectricUsageReader {
 		for (int i = 0; i < monthofdata.size(); i++) {
 			for (int j = 0; j < costofdata.size(); j++) {
 				if (monthofdata.get(i) == listmonth.get(j)) {
-					//add only when the month is right
+					/*
+					 * Add only when the month is accurate.
+					 */
 					sumofmonthcost = sumofmonthcost + costofdata.get(j); 
 					sumofmonthcost = Math.round(sumofmonthcost * 100.0) / 100.0;
 				}
 			}
-			monthlycost.add(sumofmonthcost); //populate the arraylist 
-			sumofmonthcost = 0.0;//reset the sumofmonthusage to 0 and start again for next month
+			/*
+			 * Populate the arraylist.
+			 */
+			monthlycost.add(sumofmonthcost); 
+			/*
+			 * Reset the sumofmonthusage to 0 and start again for next month.
+			 */
+			sumofmonthcost = 0.0;
 		}
 	}
 
-	/*
-	 * This getter method retrieves MonthlyCost.
-	 * 
+	/**
+	 * This getter method retrieves MonthlyCost of electricity usage.
 	 * @return
 	 */
 	public ArrayList<Double> getMonthlycost() {
