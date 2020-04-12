@@ -10,14 +10,14 @@ public class ElectricUsageReader {
 
 	/*
 	 * Initializes arraylists as instance variables, which can be used in other classes. 
-	 * listmonth = arraylist contains the months for each day. 
+	 * listmonth = arraylist contains the months for each day
 	 * monthofdata = arraylist contains only the unique months, in our project will be
-	 * (Sep,Oct,Nov,Dec,Jan,Feb). 
-	 * dayofdata = arraylist contains the date of each month for 6 months. 
-	 * usageofdata = arraylist contains the daily usage in kwh for 6 months. 
-	 * costofdata = arraylist contains the daily usage in dollar for 6 months. 
-	 * monthlyusage = arraylist contains the monthly usage in kwh for 6 months. 
-	 * monthlycost = arraylist contains the monthly usage in dollar for 6 months.
+	 * (Sep,Oct,Nov,Dec,Jan,Feb)
+	 * dayofdata = arraylist contains the date of each month for 6 months
+	 * usageofdata = arraylist contains the daily usage in kwh for 6 months 
+	 * costofdata = arraylist contains the daily usage in dollar for 6 months
+	 * monthlyusage = arraylist contains the monthly usage in kwh for 6 months 
+	 * monthlycost = arraylist contains the monthly usage in dollar for 6 months
 	 */
 
 	ArrayList<Integer> listmonth = new ArrayList<Integer>();
