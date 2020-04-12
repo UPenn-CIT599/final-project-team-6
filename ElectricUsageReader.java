@@ -1,15 +1,15 @@
 import java.util.*;
 import java.io.*;
 
-/**
- * This class will read electricity usage csv file and store each column in each
+/*
+ * This class will read electricity usage data from csv file and store each column in an
  * arraylist.
  */
 
 public class ElectricUsageReader {
 
-	/**
-	 * Initialize arraylists as instance variables, which can be used in other classes. 
+	/*
+	 * Initializes arraylists as instance variables, which can be used in other classes. 
 	 * listmonth = arraylist contains the months for each day. 
 	 * monthofdata = arraylist contains only the unique months, in our project will be
 	 * (Sep,Oct,Nov,Dec,Jan,Feb). 
@@ -27,23 +27,16 @@ public class ElectricUsageReader {
 	ArrayList<Double> costofdata = new ArrayList<Double>();
 	ArrayList<Integer> monthlyusage = new ArrayList<Integer>();
 	ArrayList<Double> monthlycost = new ArrayList<Double>();
-	/**
-	 * Initialize arraylists for monthly cost in $ from Sep to Feb
-	 */
-	ArrayList<Double> sepCost = new ArrayList<Double>();
-	ArrayList<Double> octCost = new ArrayList<Double>();
-	ArrayList<Double> novCost = new ArrayList<Double>();
-	ArrayList<Double> decCost = new ArrayList<Double>();
-	ArrayList<Double> janCost = new ArrayList<Double>();
-	ArrayList<Double> febCost = new ArrayList<Double>();
-	/**
-	 * create one HashMap to store data through csv files, and convert data to int
+
+	/*
+	 * This method creates one HashMap to store data from the csv files, and converts data to int
 	 * or double.
 	 */
 	private HashMap<Integer, ElectricUsage> Usage;
 
-	/**
-	 * Constructor for this class: It passes in the filename and distribute all data
+	/*
+	 * Constructor for this class.
+	 * It passes in the filename and distributes all data
 	 * into corresponding fields for the ElectricUsage class
 	 * @param filename
 	 */
@@ -71,8 +64,8 @@ public class ElectricUsageReader {
 		}
 	}
 
-	/**
-	 * This method read through the HashMap, and store each row of data into 4
+	/*
+	 * This method reads through the HashMap, and stores each row of data into four
 	 * arraylists of this class.
 	 */
 	public void list() {
@@ -88,17 +81,17 @@ public class ElectricUsageReader {
 			costofdata.add(currentCost);//populate costofdata arraylist
 		}
 		
-		/**
-		 * Use LinkedHashSet to remove the duplicate month and only keep the unique
+		/*
+		 * Uses LinkedHashSet to remove the duplicate month and maintain the unique
 		 * month.
 		 */
 		LinkedHashSet<Integer> hashSet1 = new LinkedHashSet<>(listmonth);
 		monthofdata = new ArrayList<>(hashSet1);
 	}
 
-	/**
-	 * This method calculate the monthly usage by adding up all daily usage and save
-	 * into arraylist -- monthlyusage
+	/*
+	 * This method calculates the monthly usage by adding up all daily usage and saves
+	 * into an arraylist resulting in monthly usage.
 	 */
 	public void MonthlyUsage() {
 		int sumofmonthusage = 0; //initiate to 0
@@ -113,8 +106,8 @@ public class ElectricUsageReader {
 		}
 	}
 
-	/**
-	 * getter method of MonthlyUsage
+	/*
+	 * This getter method retrieves the MonthlyUsage.
 	 * 
 	 * @return
 	 */
@@ -122,9 +115,9 @@ public class ElectricUsageReader {
 		return monthlyusage;
 	}
 
-	/**
-	 * This method calculate the monthly cost by adding up all daily cost and save
-	 * into arraylist -- monthlycost
+	/*
+	 * This method calculates the monthly cost by adding up all daily cost and saves
+	 * into arraylist resulting in monthly cost.
 	 */
 	public void MonthlyCost() {
 		double sumofmonthcost = 0.0;
@@ -141,64 +134,12 @@ public class ElectricUsageReader {
 		}
 	}
 
-	/**
-	 * getter method of MonthlyCost
+	/*
+	 * This getter method retrieves MonthlyCost.
+	 * 
+	 * @return
 	 */
 	public ArrayList<Double> getMonthlycost() {
 		return monthlycost;
 	}
-	/**
-	 * group same month data together
-	 * If month = Sep, all daily cost belong to Sep will save into sepCost Array
-	 */
-	public void eachMonthlyCost() {
-		
-			for (int i = 0; i < costofdata.size(); i++) {
-				if (listmonth.get(i) == 9) {
-					sepCost.add(costofdata.get(i));
-				}
-				if (listmonth.get(i) == 10) {
-					octCost.add(costofdata.get(i));
-				}
-				if (listmonth.get(i) == 11) {
-					novCost.add(costofdata.get(i));
-				}
-				if (listmonth.get(i) == 12) {
-					decCost.add(costofdata.get(i));
-				}
-				if (listmonth.get(i) == 1) {
-					janCost.add(costofdata.get(i));
-				}
-				if (listmonth.get(i) == 2) {
-					febCost.add(costofdata.get(i));
-				}
-			}
-		}
-
-	/**
-	 * getter methods for each month from Sep to Feb
-	 * @return
-	 */
-	public ArrayList<Double> getSepCost() {
-		return sepCost;
-	}
-
-	public ArrayList<Double> getOctCost() {
-		return octCost;
-	}
-
-	public ArrayList<Double> getNovCost() {
-		return novCost;
-	}
-
-	public ArrayList<Double> getDecCost() {
-		return decCost;
-	}
-	public ArrayList<Double> getJanCost() {
-		return janCost;
-	}
-	public ArrayList<Double> getFebCost() {
-		return febCost;
-	}
-
 }
