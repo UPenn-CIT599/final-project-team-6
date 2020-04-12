@@ -37,7 +37,9 @@ public class LineChartOverLay extends JFrame {
 		ChartPanel panel = new ChartPanel(chart);
 		setContentPane(panel);
 	}
-
+	/**
+	 * Creates new dataset.
+	 */
 	private DefaultCategoryDataset createDataset() {
 
 		String series1 = "With EV";
