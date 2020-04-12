@@ -29,7 +29,7 @@ public class ElectricUsageReader {
 	ArrayList<Double> monthlycost = new ArrayList<Double>();
 
 	/**
-	 * This method creates one HashMap to store data from the csv files, and converts data to int
+	 * This method creates one hashmap to store data from the csv files, and converts data to integer
 	 * or double.
 	 */
 	private HashMap<Integer, ElectricUsage> Usage;
@@ -50,7 +50,7 @@ public class ElectricUsageReader {
 			 */
 			scanner.nextLine(); 
 			/*
-			 * Reads while there is a next line.
+			 * Reads line while there is a next line.
 			 */
 			while (scanner.hasNextLine()) { 
 				
@@ -128,12 +128,12 @@ public class ElectricUsageReader {
 					sumofmonthusage = sumofmonthusage + usageofdata.get(j);
 				}
 			}
-			/**
-			 * Populate arraylist with month usage data.
+			/*
+			 * Populates arraylist with month usage data.
 			 */
 			monthlyusage.add(sumofmonthusage); 
-			/**
-			 * reset the sumofmonthusage to 0 and start again for next month.
+			/*
+			 * Resets the sumofmonthusage to 0 and start again for next month.
 			 */
 			sumofmonthusage = 0; 
 		}
@@ -168,7 +168,7 @@ public class ElectricUsageReader {
 			 */
 			monthlycost.add(sumofmonthcost); 
 			/*
-			 * Reset the sumofmonthusage to 0 and start again for next month.
+			 * Resets the sumofmonthcost to 0 and start again for next month.
 			 */
 			sumofmonthcost = 0.0;
 		}
