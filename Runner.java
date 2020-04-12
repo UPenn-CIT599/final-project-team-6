@@ -2,6 +2,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 public class Runner {
 
@@ -21,6 +28,7 @@ public class Runner {
 		double mileage = 0;
 		double totalYear = 0;
 		double percentage = 0.0;
+		String month = null;
 		Scanner in = new Scanner(System.in);
 		while (check == true) {
 			System.out.println("Please enter the mileages you normal drive in one year:");
@@ -54,16 +62,37 @@ public class Runner {
 				check = false;
 			}
 		}
+		Scanner plot = new Scanner(System.in);
+		System.out.println("Please enter the month that you would like to see the cost on the plot");
+		System.out.println("Range from Sep to Feb, please enter (Sep, Oct, Nov, Dec, Jan, Feb)");
+		while (check == false) {
+		month = plot.nextLine();
+			if ((month.toLowerCase().contentEquals("sep")) || (month.toLowerCase().contentEquals("oct"))
+					|| (month.toLowerCase().contentEquals("nov")) || (month.toLowerCase().contentEquals("dec"))
+					|| (month.toLowerCase().contentEquals("jan")) || (month.toLowerCase().contentEquals("feb"))) {
+				check = true;
+				
+			} else {
+
+				check = false;
+				System.out.println("Please enter the month between Sep and Feb");
+			}
+		}
 
 		/**
 		 * call the methods and output the result.
 		 */
 		usageWithoutEV.list();
 		usageWithEV.list();
+		usageWithoutEV.eachMonthlyCost();
+		usageWithEV.eachMonthlyCost();
 		factor.EV_MPkwh(usageWithoutEV.usageofdata, usageWithEV.usageofdata);
 		factor.CharlotteElectrcityRate(usageWithEV.costofdata, usageWithEV.usageofdata);
 		factor.NewYorkElectrcityRate();
 		factor.MiamiElectrcityRate();
 		factor.CostComparsion(mileage, totalYear, percentage);	
-	}
+		factor.monthofPlot(month);
+//		System.out.println(factor.EVPlot);
+//		System.out.println(factor.nonEVPlot);
+}
 }

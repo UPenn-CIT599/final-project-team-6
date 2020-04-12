@@ -27,7 +27,13 @@ public class ElectricUsageReader {
 	ArrayList<Double> costofdata = new ArrayList<Double>();
 	ArrayList<Integer> monthlyusage = new ArrayList<Integer>();
 	ArrayList<Double> monthlycost = new ArrayList<Double>();
-
+	
+	ArrayList<Double> sepCost = new ArrayList<Double>();
+	ArrayList<Double> octCost = new ArrayList<Double>();
+	ArrayList<Double> novCost = new ArrayList<Double>();
+	ArrayList<Double> decCost = new ArrayList<Double>();
+	ArrayList<Double> janCost = new ArrayList<Double>();
+	ArrayList<Double> febCost = new ArrayList<Double>();
 	/**
 	 * create one HashMap to store data through csv files, and convert data to int
 	 * or double.
@@ -141,4 +147,54 @@ public class ElectricUsageReader {
 	public ArrayList<Double> getMonthlycost() {
 		return monthlycost;
 	}
+	
+	public void eachMonthlyCost() {
+		
+			for (int i = 0; i < costofdata.size(); i++) {
+				if (listmonth.get(i) == 9) {
+					sepCost.add(costofdata.get(i));
+				}
+				if (listmonth.get(i) == 10) {
+					octCost.add(costofdata.get(i));
+				}
+				if (listmonth.get(i) == 11) {
+					novCost.add(costofdata.get(i));
+				}
+				if (listmonth.get(i) == 12) {
+					decCost.add(costofdata.get(i));
+				}
+				if (listmonth.get(i) == 1) {
+					janCost.add(costofdata.get(i));
+				}
+				if (listmonth.get(i) == 2) {
+					febCost.add(costofdata.get(i));
+				}
+			}
+		}
+
+
+	public ArrayList<Double> getJanCost() {
+		return janCost;
+	}
+
+	public ArrayList<Double> getSepCost() {
+		return sepCost;
+	}
+
+	public ArrayList<Double> getOctCost() {
+		return octCost;
+	}
+
+	public ArrayList<Double> getNovCost() {
+		return novCost;
+	}
+
+	public ArrayList<Double> getDecCost() {
+		return decCost;
+	}
+
+	public ArrayList<Double> getFebCost() {
+		return febCost;
+	}
+
 }

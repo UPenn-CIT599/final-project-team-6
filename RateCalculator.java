@@ -223,4 +223,44 @@ public class RateCalculator {
 	public double getMiamiUserYearEV() {
 		return MiamiUserYearEV;
 	}
+	
+	ArrayList<Double> nonEVPlot = new ArrayList<Double>();
+	ArrayList<Double> EVPlot = new ArrayList<Double>();
+	public void monthofPlot(String month){
+		
+		ElectricUsageReader usageWithoutEV = new ElectricUsageReader("09-2018--03-2019.csv");
+		ElectricUsageReader usageWithEV = new ElectricUsageReader("09-2019--03-2020.csv");
+		usageWithoutEV.list();
+		usageWithEV.list();
+		usageWithoutEV.eachMonthlyCost();
+		usageWithEV.eachMonthlyCost();
+		
+		String lowerCasemonth = month.toLowerCase();
+		
+		if(lowerCasemonth.equals("sep")) {
+			nonEVPlot = usageWithoutEV.getSepCost();
+			EVPlot = usageWithEV.getSepCost();
+		}
+		if(lowerCasemonth.equals("oct")) {
+			nonEVPlot = usageWithoutEV.getOctCost();
+			EVPlot = usageWithEV.getOctCost();
+		}
+		if(lowerCasemonth.equals("nov")) {
+			nonEVPlot = usageWithoutEV.getNovCost();
+			EVPlot = usageWithEV.getNovCost();
+		}
+		if(lowerCasemonth.equals("dec")) {
+			nonEVPlot = usageWithoutEV.getDecCost();
+			EVPlot = usageWithEV.getDecCost();
+		}
+		if(lowerCasemonth.equals("jan")) {
+			nonEVPlot = usageWithoutEV.getJanCost();
+			EVPlot = usageWithEV.getJanCost();
+		}
+		if(lowerCasemonth.equals("feb")) {
+			nonEVPlot = usageWithoutEV.getFebCost();
+			EVPlot = usageWithEV.getFebCost();
+		}
+	}
+	
 }
