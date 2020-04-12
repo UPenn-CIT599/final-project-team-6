@@ -10,19 +10,28 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+/**
+ * This class is designed to display the output of select electricity usage calculations in a line chart. 
+ * The overlay is used to illustrate the dynamics of comparison data over one year, as well as a specific interval of time.
+ */
+
 public class LineChartOverLay extends JFrame {
 	ArrayList<HashMap<Integer, Double>> data;
 	private static final long serialVersionUID = 1L;
 
 	public LineChartOverLay (String title, ArrayList<HashMap<Integer, Double>> data) {
 		super(title);
-		// Create dataset
+		/*
+		 * Creates dataset.
+		 */
 		this.data = data;
 		DefaultCategoryDataset dataset = createDataset();
-		// Create chart
-		JFreeChart chart = ChartFactory.createLineChart("Electricity Usage", // Chart title
-				"Day", // X-Axis Label
-				"Electricity Cost ($)", // Y-Axis Label
+		/*
+		 * Creates chart, to include title, x-axis and y-axis.
+		 */
+		JFreeChart chart = ChartFactory.createLineChart("Electricity Usage", 
+				"Day", 
+				"Electricity Cost ($)", 
 				dataset);
 
 		ChartPanel panel = new ChartPanel(chart);
@@ -38,17 +47,27 @@ public class LineChartOverLay extends JFrame {
 
 		for (Integer key : data.get(0).keySet()) {
 			dataset.addValue(data.get(0).get(key), series1, key.toString());
-//			series1.add(key, data.get(0).get(key)); // add adds double!
+			/*
+			 *  Adds double.
+			 */
+			//series1.add(key, data.get(0).get(key)); 
 		}
 
 		for (Integer key : data.get(1).keySet()) {
-//			series1wo.add(key, data.get(1).get(key)); // add adds double!
+			/*
+			 *  Adds double.
+			*/
+			
+			//series1wo.add(key, data.get(1).get(key)); 
 			dataset.addValue(data.get(1).get(key), series2, key.toString());
 		}
 
 		return dataset;
 	}
-
+/**
+ * This method generates a chart overlay using electricity usage data.
+ * @param args
+ */
 	public static void main(String[] args) {
 		ElectricUsageReader usageWithoutEV = new ElectricUsageReader("09-2018--03-2019.csv");
 		ElectricUsageReader usageWithEV = new ElectricUsageReader("09-2019--03-2020.csv");
