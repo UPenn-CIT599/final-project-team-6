@@ -1,0 +1,23 @@
+Index,Fuel Type,ICE Vehicle Model,US Location,City Name,Current National Average Price for Regular Gas per Gallon,Today's Average Regular Gas Price by City,Three Year Average Price for Premium Gas per Gallon    (East Coast),Today's Average Premium Gas Price by City,City MPG,Hwy MPG,Combined MPG,My Annual Cost of Fuel (Premium),My Monthly Fuel Cost        (Premium),My Miles Driven per Year, My Days per Week to Drive,My Weeks Driven per Year,My Daily Fuel Expense,  My Weekly Fuel Expense
+1,Gasoline,LEXUS LX,East Coast,Charlotte,2.24,1.76,3.07,2.14,12,18,14,"$2,292.86 ",$191.07 ,15000,7,50,$6.55 ,$45.86 
+2,Gasoline,MERCEDES-BENZ GLC,East Coast,Charlotte,2.24,1.76,3.07,2.14,13,17,14,"$2,292.86 ",$191.07 ,15000,7,50,$6.55 ,$45.86 
+3,Gasoline,LEXUS LX,East Coast,New York,2.24,2.25,3.07,2.65,12,18,14,"$2,839.29 ",$236.61 ,15000,7,50,$8.11 ,$56.79 
+4,Gasoline,LEXUS LX,East Coast,Atlanta,2.24,2.48,3.07,3.11,12,18,14,"$3,332.14 ",$277.68 ,15000,7,50,$9.52 ,$66.64 
+5,Gasoline,LEXUS LX,East Coast,Miami,2.24,2.17,3.07,2.84,12,18,14,"$3,042.86 ",$253.57 ,15000,7,50,$8.69 ,$60.86 
+6,Gasoline,LEXUS LX,East Coast,Richmond,2.24,1.65,3.07,1.97,12,18,14,"$2,110.71 ",$175.89 ,15000,7,50,$6.03 ,$42.21 
+7,Gasoline,LEXUS LX,East Coast,"Washington, DC",2.24,2.05,3.07,2.55,12,18,14,"$2,732.14 ",$227.68 ,15000,7,50,$7.81 ,$54.64 
+8,Gasoline,MERCEDES-BENZ GLC,East Coast,New York,2.24,2.25,3.07,2.65,13,17,14,"$2,839.29 ",$236.61 ,15000,7,50,$8.11 ,$56.79 
+9,Gasoline,MERCEDES-BENZ GLC,East Coast,Atlanta,2.24,2.48,3.07,3.11,13,17,14,"$3,332.14 ",$277.68 ,15000,7,50,$9.52 ,$66.64 
+10,Gasoline,MERCEDES-BENZ GLC,East Coast,Miami,2.24,2.17,3.07,2.84,13,17,14,"$3,042.86 ",$253.57 ,15000,7,50,$8.69 ,$60.86 
+11,Gasoline,MERCEDES-BENZ GLC,East Coast,Richmond,2.24,1.65,3.07,1.97,13,17,14,"$2,110.71 ",$175.89 ,15000,7,50,$6.03 ,$42.21 
+12,Gasoline,MERCEDES-BENZ GLC,East Coast,"Washington, DC",2.24,2.05,3.07,2.55,13,17,14,"$2,732.14 ",$227.68 ,15000,7,50,$7.81 ,$54.64 
+13,Gasoline,MERCEDES-BENZ GLC,East Coast,Cleveland,2.24,1.45,3.07,2.39,13,17,14,"$2,560.71 ",$213.39 ,15000,7,50,$7.32 ,$51.21 
+14,Gasoline,LEXUS LX,East Coast,Detroit,2.24,1.56,3.07,2.37,12,18,14,"$2,539.29 ",$211.61 ,15000,7,50,$7.26 ,$50.79 
+15,Gasoline,LEXUS LX,East Coast,Baltimore,2.24,1.89,3.07,2.49,12,18,14,"$2,667.86 ",$222.32 ,15000,7,50,$7.62 ,$53.36 
+16,Gasoline,LEXUS LX,East Coast,Boston,2.24,2.05,3.07,2.55,12,18,14,"$2,732.14 ",$227.68 ,15000,7,50,$7.81 ,$54.64 
+17,Gasoline,LEXUS LX,East Coast,Nashville,2.24,1.59,3.07,2.39,12,18,14,"$2,560.71 ",$213.39 ,15000,7,50,$7.32 ,$51.21 
+18,Gasoline,LEXUS LX,East Coast,Cleveland,2.24,1.45,3.07,2.39,12,18,14,"$2,560.71 ",$213.39 ,15000,7,50,$7.32 ,$51.21 
+19,Gasoline,MERCEDES-BENZ GLC,East Coast,Detroit,2.24,1.56,3.07,2.37,13,17,14,"$2,539.29 ",$211.61 ,15000,7,50,$7.26 ,$50.79 
+20,Gasoline,MERCEDES-BENZ GLC,East Coast,Baltimore,2.24,1.89,3.07,2.49,13,17,14,"$2,667.86 ",$222.32 ,15000,7,50,$7.62 ,$53.36 
+21,Gasoline,MERCEDES-BENZ GLC,East Coast,Boston,2.24,2.05,3.07,2.55,13,17,14,"$2,732.14 ",$227.68 ,15000,7,50,$7.81 ,$54.64 
+22,Gasoline,MERCEDES-BENZ GLC,East Coast,Nashville,2.24,1.59,3.07,2.39,13,17,14,"$2,560.71 ",$213.39 ,15000,7,50,$7.32 ,$51.21 
