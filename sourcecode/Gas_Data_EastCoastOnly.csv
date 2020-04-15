@@ -1,0 +1,28 @@
+Fuel Type,ICE Vehicle Model,City Name,Current National Average Price for Regular Gas per Gallon,Today's Average Regular Gas Price by City,Three Year Average Price for Premium Gas per Gallon    (East Coast),Today's Average Premium Gas Price by City,City MPG,Hwy MPG,Combined MPG,My Annual Cost of Fuel (Premium),My Monthly Fuel Cost        (Premium),My Miles Driven per Year, My Days per Week to Drive,My Weeks Driven per Year,My Daily Fuel Expense,  My Weekly Fuel Expense
+Gasoline,LEXUS LX ,Charlotte,$2.24 ,$1.76 ,$3.07 ,$2.14 ,12,18,14,"$2,292.86 ",$191.07 ,15000,7,50,$6.55 ,$45.86 
+Gasoline,MERCEDES-BENZ GLC,Charlotte,$2.24 ,$1.76 ,$3.07 ,$2.14 ,13,17,14,"$2,292.86 ",$191.07 ,15000,7,50,$6.55 ,$45.86 
+Gasoline,LEXUS LX ,New York,$2.24 ,$2.25 ,$3.07 ,$2.65 ,12,18,14,"$2,839.29 ",$236.61 ,15000,7,50,$8.11 ,$56.79 
+Gasoline,LEXUS LX ,Atlanta,$2.24 ,$2.48 ,$3.07 ,$3.11 ,12,18,14,"$3,332.14 ",$277.68 ,15000,7,50,$9.52 ,$66.64 
+Gasoline,LEXUS LX ,Miami,$2.24 ,$2.17 ,$3.07 ,$2.84 ,12,18,14,"$3,042.86 ",$253.57 ,15000,7,50,$8.69 ,$60.86 
+Gasoline,LEXUS LX ,Richmond,$2.24 ,$1.65 ,$3.07 ,$1.97 ,12,18,14,"$2,110.71 ",$175.89 ,15000,7,50,$6.03 ,$42.21 
+Gasoline,LEXUS LX ,"Washington, DC",$2.24 ,$2.05 ,$3.07 ,$2.55 ,12,18,14,"$2,732.14 ",$227.68 ,15000,7,50,$7.81 ,$54.64 
+Gasoline,MERCEDES-BENZ GLC,New York,$2.24 ,$2.25 ,$3.07 ,$2.65 ,13,17,14,"$2,839.29 ",$236.61 ,15000,7,50,$8.11 ,$56.79 
+Gasoline,MERCEDES-BENZ GLC,Atlanta,$2.24 ,$2.48 ,$3.07 ,$3.11 ,13,17,14,"$3,332.14 ",$277.68 ,15000,7,50,$9.52 ,$66.64 
+Gasoline,MERCEDES-BENZ GLC,Miami,$2.24 ,$2.17 ,$3.07 ,$2.84 ,12,18,14,"$3,042.86 ",$253.57 ,15000,7,50,$8.69 ,$60.86 
+Gasoline,MERCEDES-BENZ GLC,Richmond,$2.24 ,$1.65 ,$3.07 ,$1.97 ,12,18,14,"$2,110.71 ",$175.89 ,15000,7,50,$6.03 ,$42.21 
+Gasoline,MERCEDES-BENZ GLC,"Washington, DC",$2.24 ,$2.05 ,$3.07 ,$2.55 ,12,18,14,"$2,732.14 ",$227.68 ,15000,7,50,$7.81 ,$54.64 
+Gasoline,MERCEDES-BENZ GLC,Cleveland,$2.24 ,$1.45 ,$3.07 ,$2.39 ,12,18,14,"$2,560.71 ",$213.39 ,15000,7,50,$7.32 ,$51.21 
+Gasoline,LEXUS LX ,Detroit,$2.24 ,$1.56 ,$3.07 ,$2.37 ,12,18,14,"$2,539.29 ",$211.61 ,15000,7,50,$7.26 ,$50.79 
+Gasoline,LEXUS LX ,Baltimore,$2.24 ,$1.89 ,$3.07 ,$2.49 ,12,18,14,"$2,667.86 ",$222.32 ,15000,7,50,$7.62 ,$53.36 
+Gasoline,LEXUS LX ,Boston,$2.24 ,$2.05 ,$3.07 ,$2.55 ,12,18,14,"$2,732.14 ",$227.68 ,15000,7,50,$7.81 ,$54.64 
+Gasoline,LEXUS LX ,Nashville,$2.24 ,$1.59 ,$3.07 ,$2.39 ,12,18,14,"$2,560.71 ",$213.39 ,15000,7,50,$7.32 ,$51.21 
+Gasoline,LEXUS LX ,Cleveland,$2.24 ,$1.45 ,$3.07 ,$2.39 ,12,18,14,"$2,560.71 ",$213.39 ,15000,7,50,$7.32 ,$51.21 
+Gasoline,MERCEDES-BENZ GLC,Detroit,$2.24 ,$1.56 ,$3.07 ,$2.37 ,13,17,14,"$2,539.29 ",$211.61 ,15000,7,50,$7.26 ,$50.79 
+Gasoline,MERCEDES-BENZ GLC,Baltimore,$2.24 ,$1.89 ,$3.07 ,$2.49 ,13,17,14,"$2,667.86 ",$222.32 ,15000,7,50,$7.62 ,$53.36 
+Gasoline,MERCEDES-BENZ GLC,Boston,$2.24 ,$2.05 ,$3.07 ,$2.55 ,12,18,14,"$2,732.14 ",$227.68 ,15000,7,50,$7.81 ,$54.64 
+Gasoline,MERCEDES-BENZ GLC,Nashville,$2.24 ,$1.59 ,$3.07 ,$2.39 ,12,18,14,"$2,560.71 ",$213.39 ,15000,7,50,$7.32 ,$51.21 
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,Source:             U.S. Energy Information Administration,,,,,,,,,,,
+,,,,,https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_r10_a.htm,,,,,,,,,,,
