@@ -24,7 +24,7 @@ MCIT 591 Project Title: 	Tesla:  Saving Hard-earned Cash or Not?
 		Please enter the percentage you drive on Hwy: 0.3 means 30%
 		0.65 (User can key in any number between 0 and 1.)
 
-Please enter the month that you would like to see daily cost of electricity on the plot. Range from Sep to Feb, please enter 3-character month selected from: Sep, Oct, Nov, Dec, Jan, Feb
+		Please enter the month that you would like to see daily cost of electricity on the plot. Range from Sep to Feb, please 			enter 3-character month selected from: Sep, Oct, Nov, Dec, Jan, Feb
 		Feb (User can key in any number between Sep to Feb.)
 
 		Write is completed. Please find the answer text in the project directory.
